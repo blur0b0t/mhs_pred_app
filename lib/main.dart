@@ -1,6 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:mhs_pred_app/chatbot/chat_window.dart';
+import 'package:mhs_pred_app/chatbot/models/user_main.dart';
+import 'package:firebase_core/firebase_core.dart';
+// import './chatbot/chat_window.dart'
 
-void main() {
+var coll_name='mhs_pred_app';
+final UserModel user = UserModel(uid: "mhs_pred", name: "mhs");
+
+// var firebaseConfig = {
+//   apiKey: "AIzaSyD5ndkXBa_CSC5biea5Cg-_mp28-1zUmHs",
+//   authDomain: "mh-pred-app.firebaseapp.com",
+//   projectId: "mh-pred-app",
+//   storageBucket: "mh-pred-app.appspot.com",
+//   messagingSenderId: "787397179428",
+//   appId: "1:787397179428:web:2cb8c249b8d0c3a2bc80b1",
+//   measurementId: "G-DGR27SVWBP"
+// };
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+        apiKey: "AIzaSyD5ndkXBa_CSC5biea5Cg-_mp28-1zUmHs",
+        authDomain: "mh-pred-app.firebaseapp.com",
+        projectId: "mh-pred-app",
+        storageBucket: "mh-pred-app.appspot.com",
+        messagingSenderId: "787397179428",
+        appId: "1:787397179428:web:2cb8c249b8d0c3a2bc80b1",
+        measurementId: "G-DGR27SVWBP"),
+  );
   runApp(const MyApp());
 }
 
@@ -10,6 +38,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // return ChatWindowPage({
+    //   user: user,
+    // });
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -31,7 +62,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: ChatWindowPage(
+        user: user,
+      ),
     );
   }
 }
