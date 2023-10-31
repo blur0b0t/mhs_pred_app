@@ -68,7 +68,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/svgs/
-    - assets/1api.png
+    - assets/shell.png
     - assets/mh.jpg
     - assets/qx-logo-1r.png
 

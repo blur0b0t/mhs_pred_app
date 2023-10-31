@@ -252,7 +252,7 @@ class _ChatWindowPageState extends State<ChatWindowPage> {
                 Row(
                   children: <Widget>[
                     SizedBox(
-                      width: 100,
+                      width: 250,
                     ),
                     Expanded(
                      child: Container(
@@ -271,7 +271,7 @@ class _ChatWindowPageState extends State<ChatWindowPage> {
                           String context = contextTextController.text;
                           sendMessage(widget.user!, context, value, "1");},
                 ),)), SizedBox(
-                      width: 100,
+                      width: 250,
                     ),
                       
                     //   TextField(
