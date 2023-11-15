@@ -1,5 +1,5 @@
 from huggingface_hub import login
-login()
+# login()
 from huggingface_hub import HfApi
 api = HfApi()
 
@@ -18,3 +18,11 @@ api.upload_folder(
     repo_id="blur0b0t/mh_shell",
     repo_type="space",
 )
+
+
+# webapp_path="/workspaces/mhi_pred_app/build/web"
+# api.upload_folder(
+#     folder_path=webapp_path,
+#     repo_id="blur0b0t/mh_one_api",
+#     repo_type="space",
+# )

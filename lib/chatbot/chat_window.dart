@@ -26,8 +26,8 @@ class _ChatWindowPageState extends State<ChatWindowPage> {
   initState() {
     super.initState();
     //
-    sendMessage(widget.user!, "context",
-        "Hi ,Please paste the paragraph in the context window from which the code snippets need to be extracted...", "0");
+    // sendMessage(widget.user!, "context",
+    //     "Hi ,Please paste the paragraph in the context window from which the code snippets need to be extracted...", "0");
   }
 
   bool isExpanded = false;
